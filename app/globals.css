@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Brand palette — Studio Adeola × Nocta Watches */
+  --color-ink: #0c0c0d; /* page background */
+  --color-cream: #f4f1ea; /* primary text   */
+  --color-muted: #8a8a82; /* secondary text */
+  --color-line: rgba(244, 241, 234, 0.12); /* hairline borders */
+
+  /* Type */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-fraunces); /* huge editorial headlines */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Small uppercase label used above section headlines */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
 }
